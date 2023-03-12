@@ -1,6 +1,6 @@
 
 ### Definición de la función
-def squared(x: float) -> float:
+def squared(x):
     return x**2
 
 def cubic(x: float) -> float:

@@ -1,11 +1,11 @@
-from utils import * ## Importamos todas los objetos que declaremos en el archivo utils
+from utils import *
 
 if __name__ == "__main__":
-
     using = True
     print("Bienvenido a tu primera calculadora hecha en Python!")
+    range_values = range(1, 10000)
 
-    while using == True:
+    for i in range(1, 10000):
         print("¿Qué operación quieres realizar?")
         print("1. Suma de dos números")
         print("2. Producto de dos números")
@@ -14,6 +14,7 @@ if __name__ == "__main__":
         print("5. Calcular el factorial de un número")
 
         selection = int(input("Ingresa la opción deseada"))
+
 
         if selection == 1:
             x = float(input("Ingresa un número... "))
@@ -44,19 +45,10 @@ if __name__ == "__main__":
             print("La opción que ingresaste no está disponible")
 
         answer = int(input("¿Quieres realizar otra operación?  \n 1. Sí \n 2. No"))
+
         if answer == 1:
-            using = True
+            continue
         else:
-            using = False
+            break
 
     print("Gracias por utilizar esta calculadora, hasta pronto!")
-
-
-    #print("Este es un programa que te permitirá hacer algunas operaciones \
-    #        y responder algunas preguntas entre números")
-    #number = int(input("Dame un número por favor... "))
-    #result = prime_detector(number) ### Result vale True o vale false
-    #if result == True:
-    #    print(f"El número {number} es primo")
-    #else:
-    #    print(f"El número {number} no es primo")
